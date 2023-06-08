@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">Salam, Nicat bey</p>
+    <button id="changeBtn">Deyisdir</button>
+    
+    <script>
+       let changeBtn = document.getElementById("changeBtn");
+       let myText = document.getElementById("text");
+
+       function changeText() {
+        console.log("salam dunya")
+       }
+
+       changeText();
+
+       changeBtn.addEventListener("click", function() {
+        myText.innerText = "Salam, Leyla xanim";
+
+        changeText();
+       });
+    </script>
+</body>
+</html>

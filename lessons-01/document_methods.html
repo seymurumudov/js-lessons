@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">
+        Butonun icindeki text
+        <span>bu bir html tagidir</span>
+    </button>
+    <button>Buton 2</button>
+
+    <script>
+        // // butun buttonlari secir
+        // let buttons = document.querySelectorAll("button");
+
+        // // queryselector ile tek buttonu secir
+        let button = document.querySelector("button");
+        
+        // // ancaq ve ancaq id'ye gore secir
+        // let buttonWithId = document.getElementById("button");
+
+        // console.log(buttons)
+
+        // let person = {
+        //     firstName : "Leyla",
+        //     lastName : "Aghazada"
+        // }
+
+        // console.log(person.firstName + " " + person.lastName)
+        // console.log(`${person.firstName} _ ${person.lastName}`)
+
+        button.addEventListener("click", function() {
+            // butun sehifeni rehmetlik edir
+            // document.write("salam dunya")
+
+            console.log(button.innerText)
+            console.log(button.innerHTML)
+
+            button.innerText = "<h3>SALAM DUNYA</h3>"
+        });
+    </script>
+</body>
+</html>

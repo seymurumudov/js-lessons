@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamp App</title>
+</head>
+
+<body>
+    <img id="lampImage" src="./assets/images/sonulu_isiq.gif" alt="">
+
+    <hr>
+
+    <button id="onBtn">Yandir</button>
+    <button id="offBtn">Sondur</button>
+
+    <script>
+        // const lampImage = document.getElementById("lampImage");
+        const lampImage = document.querySelector("#lampImage");
+        const onBtn = document.getElementById("onBtn");
+        const offBtn = document.getElementById("offBtn");
+
+        function lampOnOrOff(type) {
+            let filePath = "./assets/images/";
+
+            if (type.toLowerCase() == "yandir") {
+                filePath += "yanili_isiq.gif";
+            } else if (type.toLowerCase() == "sondur") {
+                filePath += "sonulu_isiq.gif";
+            }
+            
+            lampImage.src = filePath;
+        }
+
+        onBtn.addEventListener("click", () => lampOnOrOff(onBtn.innerText));
+        offBtn.addEventListener("click", () => lampOnOrOff(offBtn.innerText))
+    </script>
+</body>
+
+</html>
